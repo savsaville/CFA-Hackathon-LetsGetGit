@@ -16,3 +16,29 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+.navbar-brand > img {
+  height: 60%;
+  display: inline;
+}
+
+.navbar {
+  background-color: rgb(88, 144, 227);
+  background: rgb(88, 144, 227);
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  background-color: rgb(63, 110, 180);
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a:active {
+  background-color: rgb(63, 110, 180);
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
