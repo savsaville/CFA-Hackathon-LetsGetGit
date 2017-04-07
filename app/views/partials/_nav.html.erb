@@ -1,5 +1,4 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -10,10 +9,10 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
         <li><a href="#">Launch VR Class</a></li>
-        <li><a href="#">Profileuheehwrewhrehrgyer</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+        <li><%= link_to 'Class Board', posts_path %></li>
+        <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+        <% end %></ul>
     </div>
-  </div>
 </nav>
