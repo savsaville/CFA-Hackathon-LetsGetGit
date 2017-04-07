@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   get 'pages/aframe1'
+  get 'pages/aframe2'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
