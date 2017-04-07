@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <title>360° Image Browser</title>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+
+  </head>
+  <body>
+    <script>
+  AFRAME.registerComponent('scale-on-mouseenter', {
+    schema: {
+      to: {default: '2.5 2.5 2.5'}
+    },
+    init: function () {
+      var data = this.data;
+      this.el.addEventListener('mouseenter', function () {
+        this.setAttribute('scale', data.to);
+      });
+    }
+  });
+</script>
+    <a-scene>
+
+        <a-assets>
+    <audio src="https://cdn.aframe.io/basic-guide/audio/backgroundnoise.wav" autoplay
+      preload></audio>
+  </a-assets>
+
+  <img id="city" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
+    <img id="city-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg">
+    <img id="cubes" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">
+    <img id="cubes-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
+    <img id="sechelt" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
+    <img id="sechelt-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg">
+
+    <script id="plane" type="text/html">
+      <a-entity class="link"
+        geometry="primitive: plane; height: 1; width: 1"
+        material="shader: flat; src: #cubes-thumb"
+        sound="on: click; src: #click-sound"></a-entity>
+    </script>
+    <a-entity template="src: #plane"></a-entity>
+<a-entity template="src: #plane"></a-entity>
+<a-entity template="src: #plane"></a-entity>
+
+        <!-- <img id="boxTexture" src="https://pbs.twimg.com/profile_images/691206086955790336/CDMbA57p.png"> -->
+        <!-- <img id="boxCSS" src="http://www.myiconfinder.com/uploads/iconsets/5afa1ee1e39e6f7ef2cc4737666a2d43.png"> -->
+       <img id="skyTexture"
+         src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
+
+       <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+     </a-assets>
+
+     <!-- FIRST BOX -->
+     <a-box src="https://pbs.twimg.com/profile_images/691206086955790336/CDMbA57p.png" position="0 2 -5" rotation="0 45 45" scale="2 2 2"
+        scale-on-mouseenter="to: 2.2 2.2 2.2">
+   <a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000"
+     repeat="indefinite"></a-animation>
+     <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
+  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+  <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
+</a-box>
+  <!-- enter text below -->
+ <a-text value=" " color="green"
+        position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text>
+      <a-camera>
+        <a-cursor></a-cursor>
+     </a-camera>
+     <a-sky src="#skyTexture"></a-sky>
+     <a-light type="ambient" color="#445451"></a-light>
+     <a-light type="point" intensity="2" position="2 4 4"></a-light>
+
+     <!-- SECOND BOX -->
+
+     <a-box href="https://github.com/gasolin/aframe-href-component" src="http://img.freepik.com/free-icon/css-file-format-symbol_318-45841.jpg?size=338&ext=jpg" position="-5 2 0" rotation="0 45 45"
+         scale="2 2 2">   <a-animation attribute="position" to="-5 2.4 0" direction="alternate" dur="2000"
+     repeat="indefinite"></a-animation>
+     <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
+  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+  <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
+</a-box>
+
+    <!-- THIRD BOX -->
+    <a-box src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/200px-HTML5_logo_and_wordmark.svg.png" position="5 2 0" rotation="0 45 45"
+        scale="2 2 2">   <a-animation attribute="position" to="5 2.4 0" direction="alternate" dur="2000"
+    repeat="indefinite"></a-animation>
+    <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
+ <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+ <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
+</a-box>
+
+  <!-- FOURTH BOX -->
+  <a-box src="https://pbs.twimg.com/profile_images/691206086955790336/CDMbA57p.png" position="-5 2 15" rotation="0 45 45"
+      scale="3 3 3">   <a-animation attribute="position" to="-2 1 5" direction="alternate" dur="2000"
+  repeat="indefinite"></a-animation>
+  <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
+<a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+<a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
+</a-box>
+
+</a-scene>
+</body>
+</html>
