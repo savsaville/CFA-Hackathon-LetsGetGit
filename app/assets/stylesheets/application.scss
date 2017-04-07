@@ -20,6 +20,7 @@
 
 $primary-colour: #5890E3;
 $primary-text: #ffffff;
+$black-text: #000;
 
 .main-colour {
   background-color: $primary-colour;
@@ -34,7 +35,11 @@ $primary-text: #ffffff;
 .login > a, a:visited, a:hover {
   color: $primary-text;
   background-color: none;
+}
 
+a, a:visited, a:hover {
+  color: $black-text;
+}
 
 .navbar-brand > img {
   height: 60%;
