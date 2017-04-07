@@ -20,6 +20,7 @@
 
 $primary-colour: #5890E3;
 $primary-text: #ffffff;
+$secondary-colour: #dddddd;
 $black-text: #000;
 
 .main-colour {
@@ -27,19 +28,49 @@ $black-text: #000;
   color: $primary-text;
 }
 
+.banner {
+  background-image: url("http://i.imgur.com/Mg9LJkY.jpg");
+  background-size: 100vw;
+  width: 100vw;
+  height: 100vh;
+}
 
 .login {
   padding: 10px 15px;
   border-radius: 20px;
 }
 
-.login > a, a:visited, a:hover {
+.login > a, .login > a:visited, .login > a:hover {
   color: $primary-text;
   background-color: none;
 }
 
 a, a:visited, a:hover {
   color: $black-text;
+}
+
+.landing-page {
+  width: 100%;
+}
+
+.text-black {
+  color: $black-text;
+}
+
+.text-white {
+  color: $primary-text;
+}
+
+.blue-bg {
+  background-color: $primary-colour
+}
+
+.posts {
+  background-color: $secondary-colour;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .navbar-brand > img {
