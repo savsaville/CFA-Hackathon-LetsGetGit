@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+
   devise_for :users
   root 'pages#home'
 
