@@ -43,6 +43,13 @@ For our project we using a ruby on rails structure utilising the sqlite DB frame
 
 Our site structure looks like as follows:
 
+![login register](https://cloud.githubusercontent.com/assets/25731546/24841758/9d352326-1dce-11e7-8621-a2b0778a1658.png)
+
+![home](https://cloud.githubusercontent.com/assets/25731546/24841759/9d369d14-1dce-11e7-96f7-bf5ae3f1fb03.png)
+
+![profile](https://cloud.githubusercontent.com/assets/25731546/24841757/9d34ec8a-1dce-11e7-914d-429bbb7c9aec.png)
+
+![forum](https://cloud.githubusercontent.com/assets/25731546/24841756/9d344096-1dce-11e7-8b67-9e52912293a3.png)
 
 For this project we used the following gems:
 
