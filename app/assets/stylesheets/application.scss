@@ -30,9 +30,11 @@ $black-text: #000;
 
 .banner {
   background-image: url("http://i.imgur.com/Mg9LJkY.jpg");
-  background-size: 100vw;
-  width: 100vw;
   height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
 }
 
 .login {
