@@ -64,7 +64,7 @@ This was a fairly simple structure to work with and it didn't really provide too
 
 
 
-#THE FUTURE OF VCR
+# THE FUTURE OF VCR
 
 The development of this concept comes with the ability for significant growth as accessibility and funding become more available. Currently as our MVP product stands the application can accomodate Users need to be able to access an online classroom, a forum to access and share materials, and a way for them to interact with the wider tech community. If this product were to extend to the next stage then we would look at including other user stories such as:
 
